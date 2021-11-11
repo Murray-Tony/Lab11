@@ -6,6 +6,7 @@ class Faculty : Person
   private string Title{get;set;}
   public DateTime DateOfEmployment{get;set;}
   private double YearlySalary{get;set;}
+  public string School{get;set;}
   private bool Tenured{get;set;}
   public Faculty()
   {
@@ -26,11 +27,24 @@ class Faculty : Person
   }
   public void Promote()
   {
-    
+    if (Title == "Instructor" && DateOfEmployment.AddYears(2)<=DateTime.Today)
+        Title = "Assistant Professor";
+        Console.WriteLine("Faculty promoted to Assistant Professor rank.");
+    else if (Title == "Assistant Professor"&& DateOfEmployment.AddYears(5),=DateTime.Today)
+      Title = "Associate Professor";
+      Console.WriteLine("Faculty has been promoted to Associate Professor rank.");
+    else if (Title == "Associate Professor"&& DateOfEmployment.AddYears(10)<=DateTime.Today)
+      Title = "Professor";
+      Console.WriteLine("Faculty promoted to Professor rank.");
+    else if (Title == "Professor")
+      Console.WriteLine("No more promotion possible");
+    else 
+      Console.WriteLine("Null value");
   }
   public override void Intro()
   {
     base.Intro();
-    Console.WriteLine("I am Tenured:"+ Tenured);
+    Console.WriteLine("I work as "+ Title+ " at "+School+" since "+DateOfEmployment.Year);
+    
   }
 }
