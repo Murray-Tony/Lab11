@@ -4,7 +4,7 @@ class Faculty : Person
 {
   private string Id{get;set;}
   private string Title{get;set;}
-  private DateTime DateOfEmployment{get;set;}
+  public DateTime DateOfEmployment{get;set;}
   private double YearlySalary{get;set;}
   private bool Tenured{get;set;}
   public Faculty()
@@ -20,9 +20,17 @@ class Faculty : Person
   public void GrantTenure()
   {
     if (DateOfEmployment.AddYears(5)<= DateTime.Today)
-      return true;
+      Tenured = true;
     else
-      return false;
+      Tenured = false;
   }
-
+  public void Promote()
+  {
+    
+  }
+  public override void Intro()
+  {
+    base.Intro();
+    Console.WriteLine("I am Tenured:"+ Tenured);
+  }
 }
