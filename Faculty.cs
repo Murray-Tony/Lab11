@@ -3,11 +3,11 @@ using System;
 class Faculty : Person
 {
   private string Id{get;set;}
-  private string Title{get;set;}
+  public string Title{get;set;}
   public DateTime DateOfEmployment{get;set;}
-  private double YearlySalary{get;set;}
+  public double YearlySalary{get;set;}
   public string School{get;set;}
-  private bool Tenured{get;set;}
+  public bool Tenured{get;set;}
   public Faculty()
   {
     Title = "Instructor";
