@@ -45,12 +45,12 @@ class Faculty : Person
     else if (Title == "Professor")
       Console.WriteLine("No more promotion possible");
     else 
-      Console.WriteLine("Null value");
+      Console.WriteLine("Not Eligible for promotion.");
   }
   public override void Intro()
   {
     base.Intro();
-    Console.WriteLine("I work as "+ Title+ " at "+School+" since "+DateOfEmployment.Year);
+    Console.WriteLine("I work as a "+ Title+ " at "+School+", and have been here since "+DateOfEmployment.Year);
     
   }
 }

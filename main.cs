@@ -5,9 +5,14 @@ class Program {
     Console.WriteLine ("Hello World");
     Faculty f1 = new Faculty("Tony", "Murray");
     f1.School = "Tri-C";
-    f1.DateOfEmployment = Convert.ToDateTime("11/11/2016");
+    f1.DateOfEmployment = Convert.ToDateTime("11/11/2000");
     f1.GrantTenure();
     f1.Intro();
-    
+    f1.Promote();
+    f1.Intro();
+    f1.Promote();
+    f1.Intro();
+    f1.Promote();
+    f1.Intro();
   }
 }
