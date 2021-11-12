@@ -28,14 +28,20 @@ class Faculty : Person
   public void Promote()
   {
     if (Title == "Instructor" && DateOfEmployment.AddYears(2)<=DateTime.Today)
+    {
       Title = "Assistant Professor";
       Console.WriteLine("Faculty promoted to Assistant Professor rank.");
-    else if (Title == "Assistant Professor"&& DateOfEmployment.AddYears(5),=DateTime.Today)
+    }
+    else if (Title == "Assistant Professor"&& DateOfEmployment.AddYears(5)<=DateTime.Today)
+      {
       Title = "Associate Professor";
       Console.WriteLine("Faculty has been promoted to Associate Professor rank.");
+      }
     else if (Title == "Associate Professor"&& DateOfEmployment.AddYears(10)<=DateTime.Today)
+    {
       Title = "Professor";
       Console.WriteLine("Faculty promoted to Professor rank.");
+    }
     else if (Title == "Professor")
       Console.WriteLine("No more promotion possible");
     else 
